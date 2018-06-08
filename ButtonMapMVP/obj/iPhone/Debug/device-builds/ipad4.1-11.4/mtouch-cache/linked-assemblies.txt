@@ -1,0 +1,4 @@
+RemoveDynamicRegistrar:true
+/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/bin/iPhone/Debug/device-builds/ipad4.1-11.4/ButtonMapMVP.app:/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/mtouch-cache/Link/ButtonMapMVP.exe
+/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/bin/iPhone/Debug/device-builds/ipad4.1-11.4/ButtonMapMVP.app:/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/mtouch-cache/Link/mscorlib.dll
+/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/bin/iPhone/Debug/device-builds/ipad4.1-11.4/ButtonMapMVP.app:/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/mtouch-cache/Link/Xamarin.iOS.dll
