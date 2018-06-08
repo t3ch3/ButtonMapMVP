@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @class UIApplicationDelegate;
+@class UIKit_UIControlEventProxy;
 @class __MonoMac_NSActionDispatcher;
 @class __MonoMac_NSAsyncActionDispatcher;
 @class AppDelegate;
@@ -41,10 +42,37 @@
 
 @interface ViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * Button1;
+	@property (nonatomic, assign) UIButton * Button2;
+	@property (nonatomic, assign) UIButton * Button3;
+	@property (nonatomic, assign) UIButton * Button4;
+	@property (nonatomic, assign) UIButton * Button5;
+	@property (nonatomic, assign) UIButton * Button6;
+	@property (nonatomic, assign) UIImageView * Image1;
+	@property (nonatomic, assign) UIImageView * Image2;
+	@property (nonatomic, assign) UIWebView * WebView1;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) Button1;
+	-(void) setButton1:(UIButton *)p0;
+	-(UIButton *) Button2;
+	-(void) setButton2:(UIButton *)p0;
+	-(UIButton *) Button3;
+	-(void) setButton3:(UIButton *)p0;
+	-(UIButton *) Button4;
+	-(void) setButton4:(UIButton *)p0;
+	-(UIButton *) Button5;
+	-(void) setButton5:(UIButton *)p0;
+	-(UIButton *) Button6;
+	-(void) setButton6:(UIButton *)p0;
+	-(UIImageView *) Image1;
+	-(void) setImage1:(UIImageView *)p0;
+	-(UIImageView *) Image2;
+	-(void) setImage2:(UIImageView *)p0;
+	-(UIWebView *) WebView1;
+	-(void) setWebView1:(UIWebView *)p0;
 	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(BOOL) conformsToProtocol:(void *)p0;

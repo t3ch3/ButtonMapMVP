@@ -39,32 +39,52 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-cl-bEO">
-                                <rect key="frame" x="20" y="256" width="301.5" height="99"/>
-                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Button6"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOJ-dA-B3j">
-                                <rect key="frame" x="345.5" y="256" width="301.5" height="99"/>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Button5"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-dh-AZs">
                                 <rect key="frame" x="345.5" y="142" width="301.5" height="99"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button4"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-cl-bEO">
+                                <rect key="frame" x="20" y="256" width="301.5" height="99"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOJ-dA-B3j">
+                                <rect key="frame" x="345.5" y="256" width="301.5" height="99"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button6"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/Earthshaker_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="zAT-I7-saJ">
+                                <rect key="frame" x="25" y="33" width="291.5" height="89"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/images.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="529">
+                                <rect key="frame" x="350.5" y="33" width="291.5" height="89"/>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="849">
+                                <rect key="frame" x="40" y="49" width="577" height="291"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uXd-Tv-Rsd" firstAttribute="trailing" secondItem="zAT-I7-saJ" secondAttribute="trailing" constant="5" id="259"/>
+                            <constraint firstItem="zAT-I7-saJ" firstAttribute="leading" secondItem="uXd-Tv-Rsd" secondAttribute="leading" constant="5" id="260"/>
+                            <constraint firstItem="zAT-I7-saJ" firstAttribute="top" secondItem="uXd-Tv-Rsd" secondAttribute="top" constant="5" id="261"/>
+                            <constraint firstItem="zAT-I7-saJ" firstAttribute="bottom" secondItem="uXd-Tv-Rsd" secondAttribute="bottom" constant="-5" id="262"/>
+                            <constraint firstItem="6Dp-D0-bEF" firstAttribute="trailing" secondItem="529" secondAttribute="trailing" constant="5" id="530"/>
+                            <constraint firstItem="529" firstAttribute="leading" secondItem="6Dp-D0-bEF" secondAttribute="leading" constant="5" id="531"/>
+                            <constraint firstItem="529" firstAttribute="top" secondItem="6Dp-D0-bEF" secondAttribute="top" constant="5" id="532"/>
+                            <constraint firstItem="529" firstAttribute="bottom" secondItem="6Dp-D0-bEF" secondAttribute="bottom" constant="-5" id="533"/>
                             <constraint firstItem="vGs-B8-KmC" firstAttribute="width" secondItem="Fze-dh-AZs" secondAttribute="width" id="0Zh-Mw-8zv"/>
                             <constraint firstItem="6Dp-D0-bEF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4sg-Xy-UsB"/>
                             <constraint firstItem="Fze-dh-AZs" firstAttribute="leading" secondItem="vGs-B8-KmC" secondAttribute="trailing" constant="24" id="8R7-Nt-FZb"/>
                             <constraint firstItem="uXd-Tv-Rsd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8wE-dA-zJC"/>
                             <constraint firstItem="vGs-B8-KmC" firstAttribute="top" secondItem="uXd-Tv-Rsd" secondAttribute="bottom" constant="15" id="Ard-nk-xS6"/>
+                            <constraint firstItem="849" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="I7B-Ub-bwg"/>
                             <constraint firstItem="uXd-Tv-Rsd" firstAttribute="height" secondItem="6tC-cl-bEO" secondAttribute="height" id="JND-1N-7xq"/>
                             <constraint firstItem="uXd-Tv-Rsd" firstAttribute="height" secondItem="vGs-B8-KmC" secondAttribute="height" id="JVq-yc-I86"/>
                             <constraint firstItem="uXd-Tv-Rsd" firstAttribute="width" secondItem="6Dp-D0-bEF" secondAttribute="width" id="LZy-oc-cdv"/>
@@ -75,8 +95,11 @@
                             <constraint firstItem="SOJ-dA-B3j" firstAttribute="leading" secondItem="6tC-cl-bEO" secondAttribute="trailing" constant="24" id="Q8U-TQ-IFU"/>
                             <constraint firstItem="6tC-cl-bEO" firstAttribute="top" secondItem="vGs-B8-KmC" secondAttribute="bottom" constant="15" id="UtQ-Fi-xRk"/>
                             <constraint firstItem="6Dp-D0-bEF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VrN-Mr-Afj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="849" secondAttribute="bottom" constant="35" id="XrD-kS-zP3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="849" secondAttribute="trailing" constant="30" id="Yip-kG-7ly"/>
                             <constraint firstItem="6Dp-D0-bEF" firstAttribute="height" secondItem="SOJ-dA-B3j" secondAttribute="height" id="afV-G9-vDa"/>
                             <constraint firstItem="6Dp-D0-bEF" firstAttribute="leading" secondItem="uXd-Tv-Rsd" secondAttribute="trailing" constant="24" id="bqK-fS-hWx"/>
+                            <constraint firstItem="849" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="cSL-1l-Y8l"/>
                             <constraint firstItem="6tC-cl-bEO" firstAttribute="width" secondItem="SOJ-dA-B3j" secondAttribute="width" id="cY6-I2-3k1"/>
                             <constraint firstItem="uXd-Tv-Rsd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ej9-yu-FYe"/>
                             <constraint firstItem="Fze-dh-AZs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k9k-bF-dU2"/>
@@ -86,10 +109,25 @@
                             <constraint firstItem="6Dp-D0-bEF" firstAttribute="height" secondItem="Fze-dh-AZs" secondAttribute="height" id="xHo-29-5Q2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Button1" destination="uXd-Tv-Rsd" id="name-outlet-uXd-Tv-Rsd"/>
+                        <outlet property="Button2" destination="6Dp-D0-bEF" id="name-outlet-6Dp-D0-bEF"/>
+                        <outlet property="Button3" destination="vGs-B8-KmC" id="name-outlet-vGs-B8-KmC"/>
+                        <outlet property="Button4" destination="Fze-dh-AZs" id="name-outlet-Fze-dh-AZs"/>
+                        <outlet property="Button5" destination="6tC-cl-bEO" id="name-outlet-6tC-cl-bEO"/>
+                        <outlet property="Button6" destination="SOJ-dA-B3j" id="name-outlet-SOJ-dA-B3j"/>
+                        <outlet property="Image1" destination="zAT-I7-saJ" id="name-outlet-zAT-I7-saJ"/>
+                        <outlet property="Image2" destination="529" id="name-outlet-529"/>
+                        <outlet property="WebView1" destination="849" id="name-outlet-849"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.171875" y="-0.78125"/>
+            <point key="canvasLocation" x="-1.349325" y="-0.8"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Images/Earthshaker_icon.png" width="256" height="144"/>
+        <image name="Images/images.jpeg" width="328" height="154"/>
+    </resources>
 </document>
