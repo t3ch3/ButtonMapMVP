@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonMapMVP", "ButtonMapMVP\ButtonMapMVP.csproj", "{F9309A15-96D4-4269-B2D0-C57F53F7B57D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Release|iPhone.Build.0 = Release|iPhone
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F9309A15-96D4-4269-B2D0-C57F53F7B57D}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
