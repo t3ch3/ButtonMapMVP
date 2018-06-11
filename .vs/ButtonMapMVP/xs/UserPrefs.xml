@@ -1,13 +1,6 @@
 ﻿<Properties StartupConfiguration="{F9309A15-96D4-4269-B2D0-C57F53F7B57D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ButtonMapMVP/Main.storyboard">
-    <Files>
-      <File FileName="ButtonMapMVP/ViewController.cs" Line="19" Column="38" />
-      <File FileName="ButtonMapMVP/Main.storyboard" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ButtonMapMVP PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.e86bb5540f16ba5ec0c3ff89f89fc278e97055e9">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.ButtonMapMVP>
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.ItemProperties.ButtonMapMVP PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.e86bb5540f16ba5ec0c3ff89f89fc278e97055e9" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
