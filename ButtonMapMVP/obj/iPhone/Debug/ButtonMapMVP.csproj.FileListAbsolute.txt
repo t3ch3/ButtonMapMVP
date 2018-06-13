@@ -5,9 +5,8 @@
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/actool/_BundleResourceWithLogicalName.items
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/coremlc/_PartialAppManifest.items
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/coremlc/_BundleResourceWithLogicalName.items
+/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/optimized/Images/Earthshaker_icon.png
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/optimized/
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/ButtonMapMVP.csproj.CoreCompileInputs.cache
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/ButtonMapMVP.exe
 /Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/ButtonMapMVP.pdb
-/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/device-builds/ipad4.1-11.4/optimized/Images/Earthshaker_icon.png
-/Users/digital3rdtester/Desktop/repos/ButtonMapMVP/ButtonMapMVP/obj/iPhone/Debug/ButtonMapMVP.csprojResolveAssemblyReference.cache
