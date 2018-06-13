@@ -3257,7 +3257,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "7F55FEE1-F223-4FBA-BDDE-DCFA380E0C01"
+	.asciz "E6D71DE8-5385-4ED5-BF77-1164BA07F7FA"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -3342,7 +3342,7 @@ _mono_aot_file_info:
 	.long 72,776,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0
-	.byte 20,229,181,198,230,151,185,117,241,98,172,34,18,238,27,84
+	.byte 128,37,106,139,36,141,155,49,15,14,242,19,107,165,99,107
 	.globl _mono_aot_module_ButtonMapMVP_info
 	.align 3
 _mono_aot_module_ButtonMapMVP_info:
