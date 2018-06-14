@@ -47,7 +47,19 @@ namespace ButtonMapMVP
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView Test { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIWebView WebView1 { get; set; }
+
+        [Action ("Button4_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void Button4_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("Button5_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void Button5_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -89,6 +101,11 @@ namespace ButtonMapMVP
             if (Image2 != null) {
                 Image2.Dispose ();
                 Image2 = null;
+            }
+
+            if (Test != null) {
+                Test.Dispose ();
+                Test = null;
             }
 
             if (WebView1 != null) {

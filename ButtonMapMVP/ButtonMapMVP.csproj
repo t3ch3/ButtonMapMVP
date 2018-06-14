@@ -107,11 +107,22 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AVPlayerView.cs" />
+    <Compile Include="AVPlayerView.designer.cs">
+      <DependentUpon>AVPlayerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVPlayerViewClass.cs" />
+    <Compile Include="AVPlayerViewClass.designer.cs">
+      <DependentUpon>AVPlayerViewClass.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images\Earthshaker_icon.png" />
+    <BundleResource Include="Resources\Images\es.png" />
     <BundleResource Include="Resources\Images\images.jpeg" />
     <BundleResource Include="Sounds\mysound.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\video.m4v" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

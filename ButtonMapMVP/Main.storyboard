@@ -21,50 +21,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXd-Tv-Rsd">
-                                <rect key="frame" x="20" y="28" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXd-Tv-Rsd" misplaced="YES">
+                                <rect key="frame" x="20" y="8" width="301.5" height="105.5"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dp-D0-bEF">
-                                <rect key="frame" x="345.5" y="28" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dp-D0-bEF" misplaced="YES">
+                                <rect key="frame" x="345.5" y="8" width="301.5" height="105.5"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-B8-KmC">
-                                <rect key="frame" x="20" y="142" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-B8-KmC" misplaced="YES">
+                                <rect key="frame" x="20" y="128.5" width="301.5" height="106"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-dh-AZs">
-                                <rect key="frame" x="345.5" y="142" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-dh-AZs" misplaced="YES">
+                                <rect key="frame" x="345.5" y="128.5" width="301.5" height="106"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button4"/>
+                                <connections>
+                                    <action selector="Button4_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1382"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-cl-bEO">
-                                <rect key="frame" x="20" y="256" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-cl-bEO" misplaced="YES">
+                                <rect key="frame" x="20" y="249.5" width="301.5" height="105.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button5"/>
+                                <connections>
+                                    <action selector="Button5_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1670"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOJ-dA-B3j">
-                                <rect key="frame" x="345.5" y="256" width="301.5" height="99"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOJ-dA-B3j" misplaced="YES">
+                                <rect key="frame" x="345.5" y="249.5" width="301.5" height="105.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button6"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/Earthshaker_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="zAT-I7-saJ">
-                                <rect key="frame" x="25" y="33" width="291.5" height="89"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/es.png" translatesAutoresizingMaskIntoConstraints="NO" id="zAT-I7-saJ" misplaced="YES">
+                                <rect key="frame" x="25" y="13" width="291.5" height="95.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/images.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="529">
-                                <rect key="frame" x="350.5" y="33" width="291.5" height="89"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/images.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="529" misplaced="YES">
+                                <rect key="frame" x="350.5" y="13" width="291.5" height="95.5"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="849">
-                                <rect key="frame" x="40" y="49" width="577" height="291"/>
+                            <webView hidden="YES" contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="849" misplaced="YES">
+                                <rect key="frame" x="40" y="29" width="577" height="311"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
@@ -119,6 +128,7 @@
                         <outlet property="Image1" destination="zAT-I7-saJ" id="name-outlet-zAT-I7-saJ"/>
                         <outlet property="Image2" destination="529" id="name-outlet-529"/>
                         <outlet property="WebView1" destination="849" id="name-outlet-849"/>
+                        <outlet property="Test" destination="8bC-Xf-vdC" id="name-outlet-8bC-Xf-vdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,7 +137,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Images/Earthshaker_icon.png" width="256" height="144"/>
         <image name="Images/images.jpeg" width="328" height="154"/>
+        <image name="Images/es.png" width="256" height="144"/>
     </resources>
 </document>

@@ -4,10 +4,35 @@ using UIKit;
 
 using Foundation;
 
+using AVFoundation;
+using MediaPlayer;
+using CoreGraphics;
+using AVKit;
+using System.Threading;
+
 namespace ButtonMapMVP
 {
     public partial class ViewController : UIViewController
     {
+        //Variables used for AVPlayer
+        AVPlayer aVPlayer;
+        AVPlayerLayer aVPlayerLayer;
+        AVAsset aVAsset;
+        AVPlayerItem aVPlayerItem;
+
+        //
+        MPMoviePlayerController mpC;
+
+        //Holds the values for screen size
+        nfloat screenHeight = UIScreen.MainScreen.Bounds.Height;
+        nfloat screenWidth = UIScreen.MainScreen.Bounds.Width;
+
+        //variables
+        const double moviePlayerPercent = 0.8;
+
+        //Indicates video is playing so resizing must be done
+        public bool videoPlaying = false;
+
         protected ViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
@@ -18,13 +43,167 @@ namespace ButtonMapMVP
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            //hide web view             WebView1.Hidden = true;             WebView1.ScrollView.ScrollEnabled = false;                //Images not interactable             Image1.UserInteractionEnabled = false;             Image2.UserInteractionEnabled = false;              Button1.TouchDown += (object sender, EventArgs e) =>             {                 //ALERT                 UIAlertView alert = new UIAlertView()                 {                     Title = "Button1 Alert",                     Message = "You clicked button 1."                 } ;                  alert.AddButton("OK");                 alert.Show();             } ;              Button2.TouchDown += (object sender, EventArgs e) =>             {                 //ALERT                 UIAlertView alert = new UIAlertView()                 {                     Title = "Button2 Alert",                     Message = "You clicked button 2."                 } ;                  alert.AddButton("OK");                 alert.Show();                  //PLAY ABC SONG                 //url = NSUrl.FromFilename("Sounds/mysound.mp3");                 //mySound = new SystemSound(url);                 //mySound.PlaySystemSound();             } ;              Button3.TouchDown += (object sender, EventArgs e) =>             {                 //play yt vid                 WebView1.Hidden = false;                 WebView1.MediaPlaybackRequiresUserAction = false;                 WebView1.AllowsInlineMediaPlayback = false; // makes it fullscreen auto after play - uses native ifll screen                  NSUrl videoURL = new NSUrl(@"https://www.youtube.com/embed/hGlyFc79BUE?start=33&end=53&autoplay=1&controls=0&rel=0");                 string htmlString = "<html>" +                 "<body>" +                     "<div style =\"position:fixed; z-index:1000; width:100%; height:100%\"> <iframe frameborder=\"0\" height=\"100%\" width=\"100%\" src=\"https://www.youtube.com/embed/hGlyFc79BUE?start=33&end=53&autoplay=1&controls=0&rel=0\" allowfullscreen> </iframe > </div >" +                 "</body>" +                 "</html>";                  WebView1.LoadHtmlString(htmlString, videoURL);             } ;
+            //round the button corners
+            Button1.Layer.CornerRadius = 15;
+            Button1.ClipsToBounds = true;
+
+            Button2.Layer.CornerRadius = 15;
+            Button2.ClipsToBounds = true;
+
+            Button3.Layer.CornerRadius = 15;
+            Button3.ClipsToBounds = true;
+
+            Button4.Layer.CornerRadius = 15;
+            Button4.ClipsToBounds = true;
+
+            Button5.Layer.CornerRadius = 15;
+            Button5.ClipsToBounds = true;
+
+            Button6.Layer.CornerRadius = 15;
+            Button6.ClipsToBounds = true;
+
+
+            //Hides the web view             WebView1.Hidden = true;             WebView1.ScrollView.ScrollEnabled = false;              //Sets the button images to non interactive, so you can click the button             Image1.UserInteractionEnabled = false;             Image2.UserInteractionEnabled = false;
+
+            //button1 - opens an alert box
+            Button1.TouchDown += (object sender, EventArgs e) =>             {
+                Console.WriteLine("pressed button 1");
+                 //ALERT                 UIAlertView alert = new UIAlertView()                 {                     Title = "Button1 Alert",                     Message = "You clicked button 1."                 } ;                  alert.AddButton("OK");                 alert.Show();             } ; 
+            //button2 - 
+            Button2.TouchDown += (object sender, EventArgs e) =>             {
+                Console.WriteLine("pressed button 2");             } ; 
+            //opens yt video inside webview
+            //button3 - opens a yt url inside a webview             Button3.TouchDown += (object sender, EventArgs e) =>             {
+                Console.WriteLine("pressed button 3");
+                 //show the webview                 WebView1.Hidden = false;
+
+                //webview configs                 WebView1.MediaPlaybackRequiresUserAction = false;                 WebView1.AllowsInlineMediaPlayback = false;
+
+                //the url of the yt vid
+                NSUrl videoURL = new NSUrl(@"https://www.youtube.com/embed/hGlyFc79BUE?start=33&end=53&autoplay=1&controls=0&rel=0");
+
+                //html for the webview
+                string htmlString = "<html>"
+                    +"<body>" 
+                    + "<div style =\"position:fixed; z-index:1000; width:100%; height:100%\"> <iframe frameborder=\"0\" height=\"100%\" width=\"100%\" src=\"https://www.youtube.com/embed/hGlyFc79BUE?start=33&end=53&autoplay=1&controls=0&rel=0\" allowfullscreen> </iframe > </div >" 
+                    +"</body>" 
+                    +"</html>"; 
+                //load the html into the webview                 WebView1.LoadHtmlString(htmlString, videoURL);             }; 
+
+            Foundation.NSNotificationCenter.DefaultCenter.AddObserver(new NSString("UIDeviceOrientationDidChangeNotification"), UpdateSize);
         }
+
+        //function checks the current screen size and resizes the movie player if a video is playing
+        private void UpdateSize(NSNotification notification)
+        {
+            //debugging purposes
+            Console.WriteLine("NOTIFICATION: "+notification);
+            Console.WriteLine("NAME: "+notification.Name);
+            Console.WriteLine("DEBUGDESC: "+notification.DebugDescription);
+            Console.WriteLine();
+
+            //if a video is playing, resize the movie player, otherwise there is no need as it is hidden &&
+            if (videoPlaying)
+            {
+                Console.WriteLine("video is playing!");
+
+                // Landscape or Portrait ?
+                Console.WriteLine(UIDevice.CurrentDevice.Orientation);
+
+                //get the screen width and height
+                screenWidth = UIScreen.MainScreen.Bounds.Width;
+                screenHeight = UIScreen.MainScreen.Bounds.Height;
+
+                //resize the movie player
+                Console.WriteLine("W: " + screenWidth.ToString());
+                Console.WriteLine("H: " + screenHeight.ToString());
+                mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * moviePlayerPercent);
+
+                //debug
+
+            }
+
+
+        }
+
+        //button 5 - uses movieplayer controller to play a video saved inside the project
+        partial void Button5_TouchUpInside(UIButton sender)
+        {
+            videoPlaying = true;
+            //CheckO();
+
+            Console.WriteLine("pressed button 5");
+
+            mpC = new MPMoviePlayerController(NSUrl.FromFilename("video.m4v"));
+
+            //movieplayer configs
+            mpC.ControlStyle = MPMovieControlStyle.None; //no controls
+            mpC.View.BackgroundColor = UIColor.Clear; //?
+            mpC.ShouldAutoplay = true;
+
+            //set the movie player size relative to screen
+            mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * moviePlayerPercent);
+
+            //add the movieplayer to the view
+            this.Add(mpC.View);
+
+            //make the video fullscreen
+            //mpC.SetFullscreen(true, true);
+
+            mpC.Play();
+        }
+
+        //button 4 - uses avplayer to play a video saved inside the project
+        partial void Button4_TouchUpInside(UIButton sender)
+        {
+            Console.WriteLine("pressed button 4");
+
+            //avplayer config and setup
+            aVAsset = AVAsset.FromUrl(NSUrl.FromFilename("video.m4v"));
+            aVPlayerItem = new AVPlayerItem(aVAsset);
+            aVPlayer = new AVPlayer(aVPlayerItem);
+            aVPlayerLayer = AVPlayerLayer.FromPlayer(aVPlayer);
+            aVPlayerLayer.Frame = View.Frame;
+            View.Layer.AddSublayer(aVPlayerLayer);
+
+            //avpvc
+            //AVPlayerViewController avpvc;
+            //avpvc = new AVPlayerViewController();
+            //avpvc.Player = aVPlayer;
+            //avpvc.ShowsPlaybackControls = true;
+            //View.AddSubview(avpvc.View);
+
+
+            aVPlayer.Play();
+        }
+
+        /*public void CheckO()
+        {
+            if (checkOrientation == true)
+            {
+                //check orientation code
+                if (this.InterfaceOrientation.IsLandscape())
+                {
+                    //get the screen width and height
+                    screenWidth = UIScreen.MainScreen.Bounds.Width;
+                    screenHeight = UIScreen.MainScreen.Bounds.Height;
+
+                    //set the movie player size relative to screen
+                    mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * 0.8);
+                }
+
+                //Console.WriteLine(this.InterfaceOrientation.ToString()); //get the orientation
+
+                CheckO();
+            }
+        }*/
 
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+
     }
 }
