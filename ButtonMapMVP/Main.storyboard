@@ -127,8 +127,8 @@
                         <outlet property="Button6" destination="SOJ-dA-B3j" id="name-outlet-SOJ-dA-B3j"/>
                         <outlet property="Image1" destination="zAT-I7-saJ" id="name-outlet-zAT-I7-saJ"/>
                         <outlet property="Image2" destination="529" id="name-outlet-529"/>
-                        <outlet property="WebView1" destination="849" id="name-outlet-849"/>
                         <outlet property="Test" destination="8bC-Xf-vdC" id="name-outlet-8bC-Xf-vdC"/>
+                        <outlet property="WebView1" destination="849" id="name-outlet-849"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Images/images.jpeg" width="328" height="154"/>
         <image name="Images/es.png" width="256" height="144"/>
+        <image name="Images/images.jpeg" width="328" height="154"/>
     </resources>
 </document>

@@ -44,6 +44,7 @@ namespace ButtonMapMVP
             // Perform any additional setup after loading the view, typically from a nib.
 
             //round the button corners
+            //buttons
             Button1.Layer.CornerRadius = 15;
             Button1.ClipsToBounds = true;
 
@@ -61,7 +62,12 @@ namespace ButtonMapMVP
 
             Button6.Layer.CornerRadius = 15;
             Button6.ClipsToBounds = true;
+            //images
+            Image1.Layer.CornerRadius = 15;
+            Image1.ClipsToBounds = true;
 
+            Image2.Layer.CornerRadius = 15;
+            Image2.ClipsToBounds = true;
 
             //Hides the web view             WebView1.Hidden = true;             WebView1.ScrollView.ScrollEnabled = false;              //Sets the button images to non interactive, so you can click the button             Image1.UserInteractionEnabled = false;             Image2.UserInteractionEnabled = false;
 
@@ -88,11 +94,40 @@ namespace ButtonMapMVP
                     + "<div style =\"position:fixed; z-index:1000; width:100%; height:100%\"> <iframe frameborder=\"0\" height=\"100%\" width=\"100%\" src=\"https://www.youtube.com/embed/hGlyFc79BUE?start=33&end=53&autoplay=1&controls=0&rel=0\" allowfullscreen> </iframe > </div >" 
                     +"</body>" 
                     +"</html>"; 
-                //load the html into the webview                 WebView1.LoadHtmlString(htmlString, videoURL);             }; 
+                //load the html into the webview                 WebView1.LoadHtmlString(htmlString, videoURL);             };
 
-            Foundation.NSNotificationCenter.DefaultCenter.AddObserver(new NSString("UIDeviceOrientationDidChangeNotification"), UpdateSize);
+            //setup events
+            //Foundation.NSNotificationCenter.DefaultCenter.AddObserver(new NSString("UIDeviceOrientationDidChangeNotification"), UpdateSize);
+            Foundation.NSNotificationCenter.DefaultCenter.AddObserver(MPMoviePlayerController.PlaybackDidFinishNotification, VideoFinished);
+            Foundation.NSNotificationCenter.DefaultCenter.AddObserver(MPMoviePlayerController.DidExitFullscreenNotification, VideoFinished);
+
+            //IMAGE PICKER
+            UIImagePickerController imagePicker = new UIImagePickerController();
+            imagePicker = new UIImagePickerController
+            {
+                SourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum,
+                MediaTypes = new string[] { "public.movie" }
+            };
+
+            // Present UIImagePickerController;
+            //UIWindow window = UIApplication.SharedApplication.KeyWindow;
+            //var viewController = window.RootViewController;
+            //viewController.PresentModalViewController(imagePicker, true);
+
         }
 
+        //video finished
+        private void VideoFinished(NSNotification notification)
+        {
+            Console.WriteLine("event: video finished");
+            mpC.SetFullscreen(false, true);
+            mpC.Stop();
+            //mpC = null;
+
+            mpC.View.Frame = new CGRect(0, 0, 0, 0);
+            Console.WriteLine("stopped video");
+        }
+       
         //function checks the current screen size and resizes the movie player if a video is playing
         private void UpdateSize(NSNotification notification)
         {
@@ -118,39 +153,43 @@ namespace ButtonMapMVP
                 Console.WriteLine("W: " + screenWidth.ToString());
                 Console.WriteLine("H: " + screenHeight.ToString());
                 mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * moviePlayerPercent);
-
-                //debug
-
             }
 
 
+        }
+
+        public void PlayVideoPlayer()
+        {
+            //movieplayer configs
+            mpC.ControlStyle = MPMovieControlStyle.Fullscreen; //was NONE
+            mpC.View.BackgroundColor = UIColor.Clear;
+            mpC.ShouldAutoplay = true;
+
+            //set the movie player size relative to screen
+            //mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * moviePlayerPercent);
+
+            //set to 0 because full screen only
+            mpC.View.Frame = new CGRect(0, 0, 0, 0);
+
+            //add the movieplayer to the view
+            this.Add(mpC.View);
+
+            //make the video fullscreen
+            mpC.SetFullscreen(true, true);
+
+            mpC.Play();
         }
 
         //button 5 - uses movieplayer controller to play a video saved inside the project
         partial void Button5_TouchUpInside(UIButton sender)
         {
             videoPlaying = true;
-            //CheckO();
 
             Console.WriteLine("pressed button 5");
 
             mpC = new MPMoviePlayerController(NSUrl.FromFilename("video.m4v"));
 
-            //movieplayer configs
-            mpC.ControlStyle = MPMovieControlStyle.None; //no controls
-            mpC.View.BackgroundColor = UIColor.Clear; //?
-            mpC.ShouldAutoplay = true;
-
-            //set the movie player size relative to screen
-            mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * moviePlayerPercent);
-
-            //add the movieplayer to the view
-            this.Add(mpC.View);
-
-            //make the video fullscreen
-            //mpC.SetFullscreen(true, true);
-
-            mpC.Play();
+            PlayVideoPlayer();
         }
 
         //button 4 - uses avplayer to play a video saved inside the project
@@ -176,27 +215,6 @@ namespace ButtonMapMVP
 
             aVPlayer.Play();
         }
-
-        /*public void CheckO()
-        {
-            if (checkOrientation == true)
-            {
-                //check orientation code
-                if (this.InterfaceOrientation.IsLandscape())
-                {
-                    //get the screen width and height
-                    screenWidth = UIScreen.MainScreen.Bounds.Width;
-                    screenHeight = UIScreen.MainScreen.Bounds.Height;
-
-                    //set the movie player size relative to screen
-                    mpC.View.Frame = new CGRect(0, 0, screenWidth, screenHeight * 0.8);
-                }
-
-                //Console.WriteLine(this.InterfaceOrientation.ToString()); //get the orientation
-
-                CheckO();
-            }
-        }*/
 
         public override void DidReceiveMemoryWarning()
         {

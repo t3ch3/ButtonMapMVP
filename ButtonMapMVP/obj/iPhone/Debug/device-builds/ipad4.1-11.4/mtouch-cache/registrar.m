@@ -755,7 +755,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x21704);
+		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x21604);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [NSObject class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -803,13 +803,13 @@ exception_handling:;
 	-(void) BridgeSelector
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x1D704);
+		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x1D204);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -851,13 +851,13 @@ exception_handling:;
 	-(void) post:(NSNotification *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, 0x26F04);
+		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, 0x25A04);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -899,13 +899,13 @@ exception_handling:;
 	-(void) xamarinApplySelector
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x2A304);
+		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x28F04);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -947,13 +947,13 @@ exception_handling:;
 	-(void) xamarinApplySelector
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x2A604);
+		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x29204);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -1033,7 +1033,7 @@ exception_handling:;
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 
 	-(id) init
@@ -1077,7 +1077,7 @@ exception_handling:;
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -1109,7 +1109,7 @@ exception_handling:;
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -1141,121 +1141,121 @@ exception_handling:;
 	-(UIButton *) Button1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1000);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1200);
 	}
 
 	-(void) setButton1:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1100);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1300);
 	}
 
 	-(UIButton *) Button2
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1200);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1400);
 	}
 
 	-(void) setButton2:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1300);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1500);
 	}
 
 	-(UIButton *) Button3
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1400);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1600);
 	}
 
 	-(void) setButton3:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1500);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1700);
 	}
 
 	-(UIButton *) Button4
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1600);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1800);
 	}
 
 	-(void) setButton4:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1700);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1900);
 	}
 
 	-(UIButton *) Button5
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1800);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1A00);
 	}
 
 	-(void) setButton5:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1900);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1B00);
 	}
 
 	-(UIButton *) Button6
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1A00);
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, 0x1C00);
 	}
 
 	-(void) setButton6:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1B00);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x1D00);
 	}
 
 	-(UIImageView *) Image1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, 0x1C00);
+		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, 0x1E00);
 	}
 
 	-(void) setImage1:(UIImageView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, 0x1D00);
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, 0x1F00);
 	}
 
 	-(UIImageView *) Image2
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, 0x1E00);
+		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, 0x2000);
 	}
 
 	-(void) setImage2:(UIImageView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, 0x1F00);
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, 0x2100);
 	}
 
 	-(UIView *) Test
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_13 (self, _cmd, &managed_method, 0x2000);
+		return native_to_managed_trampoline_13 (self, _cmd, &managed_method, 0x2200);
 	}
 
 	-(void) setTest:(UIView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_14 (self, _cmd, &managed_method, p0, 0x2100);
+		native_to_managed_trampoline_14 (self, _cmd, &managed_method, p0, 0x2300);
 	}
 
 	-(UIWebView *) WebView1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_15 (self, _cmd, &managed_method, 0x2200);
+		return native_to_managed_trampoline_15 (self, _cmd, &managed_method, 0x2400);
 	}
 
 	-(void) setWebView1:(UIWebView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_16 (self, _cmd, &managed_method, p0, 0x2300);
+		native_to_managed_trampoline_16 (self, _cmd, &managed_method, p0, 0x2500);
 	}
 
 	-(void) viewDidLoad
@@ -1267,25 +1267,25 @@ exception_handling:;
 	-(void) didReceiveMemoryWarning
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0xF00);
+		native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x1100);
 	}
 
 	-(void) Button4_TouchUpInside:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x2400);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x2600);
 	}
 
 	-(void) Button5_TouchUpInside:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x2500);
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x2700);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 @end
 
@@ -1328,20 +1328,20 @@ exception_handling:;
 	+(void) drain:(NSObject *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0x2E804);
+		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0x2D404);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2C004);
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x2AC04);
 	}
 
 	-(id) init
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x2E604);
+		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x2D204);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [NSObject class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -1352,48 +1352,50 @@ exception_handling:;
 
 	static MTClassMap __xamarin_class_map [] = {
 		{ NULL, 0x7804 /* #0 'NSObject' => 'Foundation.NSObject, Xamarin.iOS' */ },
-		{ NULL, 0x5904 /* #1 'UIApplicationDelegate' => 'UIKit.UIApplicationDelegate, Xamarin.iOS' */ },
+		{ NULL, 0x5C04 /* #1 'UIApplicationDelegate' => 'UIKit.UIApplicationDelegate, Xamarin.iOS' */ },
 		{ NULL, 0x6104 /* #2 'UIResponder' => 'UIKit.UIResponder, Xamarin.iOS' */ },
-		{ NULL, 0x5704 /* #3 'UIViewController' => 'UIKit.UIViewController, Xamarin.iOS' */ },
+		{ NULL, 0x5A04 /* #3 'UIViewController' => 'UIKit.UIViewController, Xamarin.iOS' */ },
 		{ NULL, 0x8304 /* #4 'AVPlayerViewController' => 'AVKit.AVPlayerViewController, Xamarin.iOS' */ },
-		{ NULL, 0x4004 /* #5 'MPMoviePlayerController' => 'MediaPlayer.MPMoviePlayerController, Xamarin.iOS' */ },
-		{ NULL, 0x4804 /* #6 'CALayer' => 'CoreAnimation.CALayer, Xamarin.iOS' */ },
-		{ NULL, 0x4904 /* #7 'CALayerDelegate' => 'CoreAnimation.CALayerDelegate, Xamarin.iOS' */ },
-		{ NULL, 0x5604 /* #8 'UIView' => 'UIKit.UIView, Xamarin.iOS' */ },
-		{ NULL, 0x4A04 /* #9 'UIAlertView' => 'UIKit.UIAlertView, Xamarin.iOS' */ },
-		{ NULL, 0x4C04 /* #10 'UIApplication' => 'UIKit.UIApplication, Xamarin.iOS' */ },
-		{ NULL, 0x5004 /* #11 'UIControl' => 'UIKit.UIControl, Xamarin.iOS' */ },
-		{ NULL, 0x4D04 /* #12 'UIButton' => 'UIKit.UIButton, Xamarin.iOS' */ },
-		{ NULL, 0x4E04 /* #13 'UIColor' => 'UIKit.UIColor, Xamarin.iOS' */ },
-		{ NULL, 0x4F04 /* #14 'UIKit_UIControlEventProxy' => 'UIKit.UIControlEventProxy, Xamarin.iOS' */ },
-		{ NULL, 0x5104 /* #15 'UIDevice' => 'UIKit.UIDevice, Xamarin.iOS' */ },
-		{ NULL, 0x5504 /* #16 'UIScreen' => 'UIKit.UIScreen, Xamarin.iOS' */ },
-		{ NULL, 0x5804 /* #17 'UIWindow' => 'UIKit.UIWindow, Xamarin.iOS' */ },
-		{ NULL, 0x6004 /* #18 'UIImageView' => 'UIKit.UIImageView, Xamarin.iOS' */ },
-		{ NULL, 0x6204 /* #19 'UIScrollView' => 'UIKit.UIScrollView, Xamarin.iOS' */ },
-		{ NULL, 0x6304 /* #20 'UIWebView' => 'UIKit.UIWebView, Xamarin.iOS' */ },
-		{ NULL, 0x6504 /* #21 'NSArray' => 'Foundation.NSArray, Xamarin.iOS' */ },
-		{ NULL, 0x6804 /* #22 'Foundation_InternalNSNotificationHandler' => 'Foundation.InternalNSNotificationHandler, Xamarin.iOS' */ },
-		{ NULL, 0x6B04 /* #23 'NSRunLoop' => 'Foundation.NSRunLoop, Xamarin.iOS' */ },
-		{ NULL, 0x6C04 /* #24 'NSString' => 'Foundation.NSString, Xamarin.iOS' */ },
-		{ NULL, 0x6D04 /* #25 'NSURL' => 'Foundation.NSUrl, Xamarin.iOS' */ },
-		{ NULL, 0x7404 /* #26 '__MonoMac_NSActionDispatcher' => 'Foundation.NSActionDispatcher, Xamarin.iOS' */ },
-		{ NULL, 0x7504 /* #27 '__MonoMac_NSAsyncActionDispatcher' => 'Foundation.NSAsyncActionDispatcher, Xamarin.iOS' */ },
-		{ NULL, 0x7604 /* #28 'NSAutoreleasePool' => 'Foundation.NSAutoreleasePool, Xamarin.iOS' */ },
-		{ NULL, 0x7E04 /* #29 'NSException' => 'Foundation.NSException, Xamarin.iOS' */ },
-		{ NULL, 0x7F04 /* #30 'NSNotification' => 'Foundation.NSNotification, Xamarin.iOS' */ },
-		{ NULL, 0x8004 /* #31 'NSNull' => 'Foundation.NSNull, Xamarin.iOS' */ },
-		{ NULL, 0x8404 /* #32 'AVAsset' => 'AVFoundation.AVAsset, Xamarin.iOS' */ },
-		{ NULL, 0x8504 /* #33 'AVPlayerLayer' => 'AVFoundation.AVPlayerLayer, Xamarin.iOS' */ },
-		{ NULL, 0x8604 /* #34 'AVPlayer' => 'AVFoundation.AVPlayer, Xamarin.iOS' */ },
-		{ NULL, 0x8704 /* #35 'AVPlayerItem' => 'AVFoundation.AVPlayerItem, Xamarin.iOS' */ },
-		{ NULL, 0x6604 /* #36 'NSDictionary' => 'Foundation.NSDictionary, Xamarin.iOS' */ },
-		{ NULL, 0x6904 /* #37 'NSNotificationCenter' => 'Foundation.NSNotificationCenter, Xamarin.iOS' */ },
-		{ NULL, 0x300 /* #38 'AppDelegate' => 'ButtonMapMVP.AppDelegate, ButtonMapMVP' */ },
-		{ NULL, 0x500 /* #39 'AVPlayerView' => 'ButtonMapMVP.AVPlayerView, ButtonMapMVP' */ },
-		{ NULL, 0x600 /* #40 'AVPlayerViewClass' => 'ButtonMapMVP.AVPlayerViewClass, ButtonMapMVP' */ },
-		{ NULL, 0x400 /* #41 'ViewController' => 'ButtonMapMVP.ViewController, ButtonMapMVP' */ },
-		{ NULL, 0x7A04 /* #42 '__NSObject_Disposer' => 'Foundation.NSObject+NSObject_Disposer, Xamarin.iOS' */ },
+		{ NULL, 0x4304 /* #5 'MPMoviePlayerController' => 'MediaPlayer.MPMoviePlayerController, Xamarin.iOS' */ },
+		{ NULL, 0x4904 /* #6 'CALayer' => 'CoreAnimation.CALayer, Xamarin.iOS' */ },
+		{ NULL, 0x4A04 /* #7 'CALayerDelegate' => 'CoreAnimation.CALayerDelegate, Xamarin.iOS' */ },
+		{ NULL, 0x5904 /* #8 'UIView' => 'UIKit.UIView, Xamarin.iOS' */ },
+		{ NULL, 0x4B04 /* #9 'UIAlertView' => 'UIKit.UIAlertView, Xamarin.iOS' */ },
+		{ NULL, 0x4D04 /* #10 'UIApplication' => 'UIKit.UIApplication, Xamarin.iOS' */ },
+		{ NULL, 0x5104 /* #11 'UIControl' => 'UIKit.UIControl, Xamarin.iOS' */ },
+		{ NULL, 0x4E04 /* #12 'UIButton' => 'UIKit.UIButton, Xamarin.iOS' */ },
+		{ NULL, 0x4F04 /* #13 'UIColor' => 'UIKit.UIColor, Xamarin.iOS' */ },
+		{ NULL, 0x5004 /* #14 'UIKit_UIControlEventProxy' => 'UIKit.UIControlEventProxy, Xamarin.iOS' */ },
+		{ NULL, 0x5204 /* #15 'UIDevice' => 'UIKit.UIDevice, Xamarin.iOS' */ },
+		{ NULL, 0x5704 /* #16 'UINavigationController' => 'UIKit.UINavigationController, Xamarin.iOS' */ },
+		{ NULL, 0x5304 /* #17 'UIImagePickerController' => 'UIKit.UIImagePickerController, Xamarin.iOS' */ },
+		{ NULL, 0x5804 /* #18 'UIScreen' => 'UIKit.UIScreen, Xamarin.iOS' */ },
+		{ NULL, 0x5B04 /* #19 'UIWindow' => 'UIKit.UIWindow, Xamarin.iOS' */ },
+		{ NULL, 0x6004 /* #20 'UIImageView' => 'UIKit.UIImageView, Xamarin.iOS' */ },
+		{ NULL, 0x6204 /* #21 'UIScrollView' => 'UIKit.UIScrollView, Xamarin.iOS' */ },
+		{ NULL, 0x6304 /* #22 'UIWebView' => 'UIKit.UIWebView, Xamarin.iOS' */ },
+		{ NULL, 0x6504 /* #23 'NSArray' => 'Foundation.NSArray, Xamarin.iOS' */ },
+		{ NULL, 0x6804 /* #24 'Foundation_InternalNSNotificationHandler' => 'Foundation.InternalNSNotificationHandler, Xamarin.iOS' */ },
+		{ NULL, 0x6B04 /* #25 'NSRunLoop' => 'Foundation.NSRunLoop, Xamarin.iOS' */ },
+		{ NULL, 0x6C04 /* #26 'NSString' => 'Foundation.NSString, Xamarin.iOS' */ },
+		{ NULL, 0x6D04 /* #27 'NSURL' => 'Foundation.NSUrl, Xamarin.iOS' */ },
+		{ NULL, 0x7404 /* #28 '__MonoMac_NSActionDispatcher' => 'Foundation.NSActionDispatcher, Xamarin.iOS' */ },
+		{ NULL, 0x7504 /* #29 '__MonoMac_NSAsyncActionDispatcher' => 'Foundation.NSAsyncActionDispatcher, Xamarin.iOS' */ },
+		{ NULL, 0x7604 /* #30 'NSAutoreleasePool' => 'Foundation.NSAutoreleasePool, Xamarin.iOS' */ },
+		{ NULL, 0x7E04 /* #31 'NSException' => 'Foundation.NSException, Xamarin.iOS' */ },
+		{ NULL, 0x7F04 /* #32 'NSNotification' => 'Foundation.NSNotification, Xamarin.iOS' */ },
+		{ NULL, 0x8004 /* #33 'NSNull' => 'Foundation.NSNull, Xamarin.iOS' */ },
+		{ NULL, 0x8404 /* #34 'AVAsset' => 'AVFoundation.AVAsset, Xamarin.iOS' */ },
+		{ NULL, 0x8504 /* #35 'AVPlayerLayer' => 'AVFoundation.AVPlayerLayer, Xamarin.iOS' */ },
+		{ NULL, 0x8604 /* #36 'AVPlayer' => 'AVFoundation.AVPlayer, Xamarin.iOS' */ },
+		{ NULL, 0x8704 /* #37 'AVPlayerItem' => 'AVFoundation.AVPlayerItem, Xamarin.iOS' */ },
+		{ NULL, 0x6604 /* #38 'NSDictionary' => 'Foundation.NSDictionary, Xamarin.iOS' */ },
+		{ NULL, 0x6904 /* #39 'NSNotificationCenter' => 'Foundation.NSNotificationCenter, Xamarin.iOS' */ },
+		{ NULL, 0x300 /* #40 'AppDelegate' => 'ButtonMapMVP.AppDelegate, ButtonMapMVP' */ },
+		{ NULL, 0x500 /* #41 'AVPlayerView' => 'ButtonMapMVP.AVPlayerView, ButtonMapMVP' */ },
+		{ NULL, 0x600 /* #42 'AVPlayerViewClass' => 'ButtonMapMVP.AVPlayerViewClass, ButtonMapMVP' */ },
+		{ NULL, 0x400 /* #43 'ViewController' => 'ButtonMapMVP.ViewController, ButtonMapMVP' */ },
+		{ NULL, 0x7A04 /* #44 '__NSObject_Disposer' => 'Foundation.NSObject+NSObject_Disposer, Xamarin.iOS' */ },
 		{ NULL, 0 },
 	};
 
@@ -1405,9 +1407,7 @@ exception_handling:;
 	};
 
 	static const MTProtocolWrapperMap __xamarin_protocol_wrapper_map [] = {
-		{ 0x4104 /* MediaPlayer.IMPMediaPlayback */, 0x4204 /* MPMediaPlaybackWrapper */ },
-		{ 0x5B04 /* UIKit.IUICoordinateSpace */, 0x5C04 /* UICoordinateSpaceWrapper */ },
-		{ 0x5E04 /* UIKit.IUIDynamicItem */, 0x5F04 /* UIDynamicItemWrapper */ },
+		{ 0x4404 /* MediaPlayer.IMPMediaPlayback */, 0x4504 /* MPMediaPlaybackWrapper */ },
 		{ 0x8104 /* Foundation.INSObjectProtocol */, 0x8204 /* NSObjectProtocolWrapper */ },
 	};
 
@@ -1419,11 +1419,11 @@ exception_handling:;
 		__xamarin_protocol_wrapper_map,
 		{ NULL, NULL },
 		4,
-		43,
+		45,
 		5,
 		0,
 		0,
-		4,
+		2,
 		0
 	};
 
@@ -1444,33 +1444,35 @@ void xamarin_create_classes () {
 	__xamarin_class_map [13].handle = objc_getClass ("UIColor");
 	__xamarin_class_map [14].handle = objc_getClass ("UIKit_UIControlEventProxy");
 	__xamarin_class_map [15].handle = objc_getClass ("UIDevice");
-	__xamarin_class_map [16].handle = objc_getClass ("UIScreen");
-	__xamarin_class_map [17].handle = objc_getClass ("UIWindow");
-	__xamarin_class_map [18].handle = objc_getClass ("UIImageView");
-	__xamarin_class_map [19].handle = objc_getClass ("UIScrollView");
-	__xamarin_class_map [20].handle = objc_getClass ("UIWebView");
-	__xamarin_class_map [21].handle = objc_getClass ("NSArray");
-	__xamarin_class_map [22].handle = objc_getClass ("Foundation_InternalNSNotificationHandler");
-	__xamarin_class_map [23].handle = objc_getClass ("NSRunLoop");
-	__xamarin_class_map [24].handle = objc_getClass ("NSString");
-	__xamarin_class_map [25].handle = objc_getClass ("NSURL");
-	__xamarin_class_map [26].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
-	__xamarin_class_map [27].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
-	__xamarin_class_map [28].handle = objc_getClass ("NSAutoreleasePool");
-	__xamarin_class_map [29].handle = objc_getClass ("NSException");
-	__xamarin_class_map [30].handle = objc_getClass ("NSNotification");
-	__xamarin_class_map [31].handle = objc_getClass ("NSNull");
-	__xamarin_class_map [32].handle = objc_getClass ("AVAsset");
-	__xamarin_class_map [33].handle = objc_getClass ("AVPlayerLayer");
-	__xamarin_class_map [34].handle = objc_getClass ("AVPlayer");
-	__xamarin_class_map [35].handle = objc_getClass ("AVPlayerItem");
-	__xamarin_class_map [36].handle = objc_getClass ("NSDictionary");
-	__xamarin_class_map [37].handle = objc_getClass ("NSNotificationCenter");
-	__xamarin_class_map [38].handle = [AppDelegate class];
-	__xamarin_class_map [39].handle = [AVPlayerView class];
-	__xamarin_class_map [40].handle = [AVPlayerViewClass class];
-	__xamarin_class_map [41].handle = [ViewController class];
-	__xamarin_class_map [42].handle = objc_getClass ("__NSObject_Disposer");
+	__xamarin_class_map [16].handle = objc_getClass ("UINavigationController");
+	__xamarin_class_map [17].handle = objc_getClass ("UIImagePickerController");
+	__xamarin_class_map [18].handle = objc_getClass ("UIScreen");
+	__xamarin_class_map [19].handle = objc_getClass ("UIWindow");
+	__xamarin_class_map [20].handle = objc_getClass ("UIImageView");
+	__xamarin_class_map [21].handle = objc_getClass ("UIScrollView");
+	__xamarin_class_map [22].handle = objc_getClass ("UIWebView");
+	__xamarin_class_map [23].handle = objc_getClass ("NSArray");
+	__xamarin_class_map [24].handle = objc_getClass ("Foundation_InternalNSNotificationHandler");
+	__xamarin_class_map [25].handle = objc_getClass ("NSRunLoop");
+	__xamarin_class_map [26].handle = objc_getClass ("NSString");
+	__xamarin_class_map [27].handle = objc_getClass ("NSURL");
+	__xamarin_class_map [28].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
+	__xamarin_class_map [29].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
+	__xamarin_class_map [30].handle = objc_getClass ("NSAutoreleasePool");
+	__xamarin_class_map [31].handle = objc_getClass ("NSException");
+	__xamarin_class_map [32].handle = objc_getClass ("NSNotification");
+	__xamarin_class_map [33].handle = objc_getClass ("NSNull");
+	__xamarin_class_map [34].handle = objc_getClass ("AVAsset");
+	__xamarin_class_map [35].handle = objc_getClass ("AVPlayerLayer");
+	__xamarin_class_map [36].handle = objc_getClass ("AVPlayer");
+	__xamarin_class_map [37].handle = objc_getClass ("AVPlayerItem");
+	__xamarin_class_map [38].handle = objc_getClass ("NSDictionary");
+	__xamarin_class_map [39].handle = objc_getClass ("NSNotificationCenter");
+	__xamarin_class_map [40].handle = [AppDelegate class];
+	__xamarin_class_map [41].handle = [AVPlayerView class];
+	__xamarin_class_map [42].handle = [AVPlayerViewClass class];
+	__xamarin_class_map [43].handle = [ViewController class];
+	__xamarin_class_map [44].handle = objc_getClass ("__NSObject_Disposer");
 	xamarin_add_registration_map (&__xamarin_registration_map);
 }
 
